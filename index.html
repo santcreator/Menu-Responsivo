@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Text Description">
+    <title>Configuração do Menu</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>    
+<body>
+    <!--CONFIG. CABEÇALHO-->
+    <header id="cabecalho">
+        <div class="container">
+            <!--CONFIG. TITULOS SMARTS E DESKTOPS-->
+            <div class="titulo">
+                <h1><a href="index.html">Titulo Desktop</a></h1>
+                <h2><a href="index.html">Titulo Mobile</a></h2>
+            </div>
+            <!--CONFIG. MENU DESKTOP-->
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="marca"><a href="#">Home</a></li>
+                        <li><a href="#album.html">Álbuns</a></li>
+                        <li><a href="#planos.html">Planos</a></li>
+                        <li><a href="#agenda.php">Agendamentos</a></li>
+                        <li><a href="#duvidas.php">Dúvidas</a></li>
+                        <li><a href="#contatos.php">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--CONFIG. MENU SMARTPHONE-->
+            <nav id="menuSmart" class="smartMenu">
+                <ul>
+                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                    <li class="marca"><a href="#">Home</a></li>
+                    <li><a href="#album.html">Álbuns</a></li>
+                    <li><a href="#planos.html">Planos</a></li>
+                    <li><a href="#agenda.php">Agendamentos</a></li>
+                    <li><a href="#duvidas.php">Dúvidas</a></li>
+                    <li><a href="#contatos.php">Contatos</a></li>
+                </ul>
+            </nav>
+            <span onclick="openNav()">&#9776;</span>
+            
+            <!--CONFIG. DO JAVASCRIPT DO MENU-->
+            <script>
+                function openNav() {
+                    document.getElementById("menuSmart").style.width = "100%";
+                }
+                function closeNav() {
+                    document.getElementById("menuSmart").style.width = "0";
+                }
+            </script>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/*FONTS*/
+@font-face {
+	font-family:'fonteLogo';
+	src: url("../fonts/satisfy.ttf");
+}
+@font-face {
+	font-family:'fonteTitulo';
+	src: url("../fonts/oswald.ttf");
+}
+
+/*CONFIG. PADRÃO*/
+*{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/*CONFIG. CABEÇALHO TABLET DESKTOP*/
+#cabecalho .container{
+    flex-direction: row;
+    background-color: #242323;
+    color: #c99a22;
+}
+#cabecalho .titulo{
+    width: 33%;
+}
+#cabecalho .titulo h1 a{
+    font-size: 130%;
+    font-family: 'fonteTitulo';
+    color: #c99a22;
+}
+
+/*CONFIG. MENU SMARTPHONE TABLET*/
+#cabecalho .titulo{
+    width: 100%;
+    padding: 15px 0;
+}
+#cabecalho .titulo h2 a{
+    margin-top: 10px;
+    font-size: 150%;
+    font-family: 'fonteLogo';
+    color: #c99a22;
+}
+span{
+    cursor: pointer;
+    font-size: 200%;
+}
+#cabecalho .container .smartMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #242323;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+#cabecalho .container .smartMenu a {
+    font-size: 125%;
+    line-height: 40px;
+    display: block;
+    transition: 0.3s;
+    color: #c99a22;
+}
+#cabecalho .container .smartMenu a:hover{
+    color: #4d4d4d;
+}
+#cabecalho .container .smartMenu .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 300%;
+    padding: 10px 20px 10px 0;
+    text-align: right;
+}
+
+/*CONFIG. MENU DESKTOP*/
+#cabecalho .menu {
+    padding: 15px 25px 15px 0;
+    text-align: right;
+}
+#cabecalho .menu li{
+    display: inline;
+    text-transform: uppercase;
+}
+#cabecalho .menu li.marca{
+    background-color: #e6e6e6;
+    padding: 21px 8px;
+}
+#cabecalho .menu a{
+    padding: 15px 8px;
+    color: #c99a22;
+}
+#cabecalho .menu a:hover{
+    background-color: #e6e6e6;
+}
+
+/*CONFIG. DAS MEDIAS*/
+@media screen and (min-width: 1024px){
+    #cabecalho .titulo, span, h2{
+    width: 33%;
+}
+    #cabecalho span, h2{
+    display: none;
+}
+}
+
+@media screen and (max-width: 1024px){
+    #cabecalho .menu, h1{
+    display: none;
+}
+}
+
